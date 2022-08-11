@@ -11,3 +11,32 @@ body
     align-items: center
     min-height: 100vh
 
+main
+    .circles
+        width: 120px
+        height: 120px
+        display: grid
+        grid-template-columns: repeat(4,20px) //4 Horizontales
+        grid-template-rows: repeat(4,20px)
+        //background-color: #f00
+        justify-content: space-between
+        align-content: space-between
+        transform: rotate(-45deg) //Gira el elemento
+        span
+            background-color: #fff
+            border-radius: 50%
+            animation: animate_scale 1.6s linear infinite
+            @keyframes animate_scale
+                0%
+                    
+                50%
+                    transform: scale(0.5)
+                100%
+            &:nth-child(4n +3)
+                animation-delay: 200ms
+            &:nth-child(4n +2)
+                animation-delay: 400ms
+            &:nth-child(4n +1)
+                animation-delay: 600ms
+                
+                    

@@ -13,4 +13,34 @@ body {
   min-height: 100vh;
 }
 
+main .circles {
+  width: 120px;
+  height: 120px;
+  display: grid;
+  grid-template-columns: repeat(4, 20px);
+  grid-template-rows: repeat(4, 20px);
+  justify-content: space-between;
+  align-content: space-between;
+  transform: rotate(-45deg);
+}
+main .circles span {
+  background-color: #fff;
+  border-radius: 50%;
+  animation: animate_scale 1.6s linear infinite;
+}
+@keyframes animate_scale {
+  50% {
+    transform: scale(0.5);
+  }
+}
+main .circles span:nth-child(4n+3) {
+  animation-delay: 200ms;
+}
+main .circles span:nth-child(4n+2) {
+  animation-delay: 400ms;
+}
+main .circles span:nth-child(4n+1) {
+  animation-delay: 600ms;
+}
+
 /*# sourceMappingURL=style.css.map */
