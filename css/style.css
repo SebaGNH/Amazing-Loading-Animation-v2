@@ -17,8 +17,8 @@ main .circles {
   width: 120px;
   height: 120px;
   display: grid;
-  grid-template-columns: repeat(4, 20px);
-  grid-template-rows: repeat(4, 20px);
+  grid-template-columns: repeat(5, 20px);
+  grid-template-rows: repeat(5, 20px);
   justify-content: space-between;
   align-content: space-between;
   transform: rotate(-45deg);
@@ -26,21 +26,24 @@ main .circles {
 main .circles span {
   background-color: #fff;
   border-radius: 50%;
-  animation: animate_scale 1.6s linear infinite;
+  animation: animate_scale 2s linear infinite;
 }
 @keyframes animate_scale {
   50% {
     transform: scale(0.5);
   }
 }
-main .circles span:nth-child(4n+3) {
+main .circles span:nth-child(5n+4) {
   animation-delay: 200ms;
 }
-main .circles span:nth-child(4n+2) {
+main .circles span:nth-child(5n+3) {
   animation-delay: 400ms;
 }
-main .circles span:nth-child(4n+1) {
+main .circles span:nth-child(5n+2) {
   animation-delay: 600ms;
+}
+main .circles span:nth-child(5n+1) {
+  animation-delay: 800ms;
 }
 
 /*# sourceMappingURL=style.css.map */
