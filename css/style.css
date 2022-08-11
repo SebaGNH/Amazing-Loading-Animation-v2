@@ -29,8 +29,12 @@ main .circles span {
   animation: animate_scale 2s linear infinite;
 }
 @keyframes animate_scale {
+  0%, 100% {
+    background: #ff00e0;
+  }
   50% {
     transform: scale(0.5);
+    background: #14ffe9;
   }
 }
 main .circles span:nth-child(5n+4) {
